@@ -1,5 +1,8 @@
 #!/bin/bash
 
+scp deploy.sh root@192.168.1.210:deploy.sh
+
+
 IMAGE_ID=$(pveam list local | grep ubuntu | cut -d" " -f1)
 
 pct create $Container_ID local:vztmpl/ubuntu-20.04-standard_20.04-1_amd64.tar.gz \
